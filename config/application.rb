@@ -30,6 +30,8 @@ module TsTodo
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.debug_exception_response_format = :api
+
     # Enable Cross-Origin Resource Sharing (CORS) in order to make cross-origin AJAX requests possible
     config.middleware.insert_before 0, Rack::Cors do
       allow do
