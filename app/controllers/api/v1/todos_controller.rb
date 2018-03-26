@@ -29,8 +29,8 @@ module Api::V1
 	  def video_uploaded
 	  	# https://www.youtube.com/channel/UCGW4ycTR54jbCvCqo-obRSw
 
-	  	Item.create!(name: "Youtube", query: request.params.to_s, todo_id: 1)
-	    head :no_content
+	  	@item = Item.create!(name: "Youtube", query: request.params.to_s, todo_id: 1)
+	    json_response(@item, :created)
 	  end
 
 	  private
