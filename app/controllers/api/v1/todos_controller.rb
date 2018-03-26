@@ -30,7 +30,8 @@ module Api::V1
 	  	# https://www.youtube.com/channel/UCGW4ycTR54jbCvCqo-obRSw
 
 	  	@item = Item.create!(name: "Youtube", query: request.params.to_s, todo_id: 1)
-	    json_response(@item, :created)
+	    # json_response(@item, :created)
+	    render :nothing => true, :status => 204 and return
 	  end
 
 	  private
