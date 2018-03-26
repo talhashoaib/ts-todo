@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   scope module: 'api' do
     namespace :v1 do
-      resources :todos
+      resources :todos do
+			  collection do
+			    get 'video_uploaded'
+        end
+      end
     end
   end
 end

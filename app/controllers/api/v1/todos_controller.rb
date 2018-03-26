@@ -26,6 +26,13 @@ module Api::V1
 	    head :no_content
 	  end
 
+	  def video_uploaded
+	  	# https://www.youtube.com/channel/UCGW4ycTR54jbCvCqo-obRSw
+
+	  	Item.create!(name: "Youtube", query: request.params.to_s, todo_id: 1)
+	    head :no_content
+	  end
+
 	  private
 
 	  def todo_params
