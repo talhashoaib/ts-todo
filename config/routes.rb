@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :todos do
 			  collection do
-			    get 'video_uploaded'
+			    post 'video_uploaded'
         end
       end
     end
