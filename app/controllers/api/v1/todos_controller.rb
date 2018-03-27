@@ -31,7 +31,8 @@ module Api::V1
 
 	  	@item = Item.create!(name: "Youtube", query: request.params.to_s, todo_id: 1)
 	    # json_response(@item, :created)
-	    render :nothing => true, :status => 204 and return
+	    # render :nothing => true, :status => 204 and return
+	    render plain: request.params["hub.challenge"]
 	  end
 
 	  private
