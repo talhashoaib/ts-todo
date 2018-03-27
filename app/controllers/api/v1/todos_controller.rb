@@ -29,7 +29,7 @@ module Api::V1
 	  def video_uploaded
 	  	# https://www.youtube.com/channel/UCGW4ycTR54jbCvCqo-obRSw
 
-	  	@item = Item.create!(name: "Youtube", query: request.raw_post.to_s, todo_id: 1)
+	  	@item = Item.create!(name: "Youtube", query: request.body.to_s, todo_id: 1)
 	    # json_response(@item, :created)
 	    render :nothing => true, :status => 204 and return
       # for 1st time subscription
